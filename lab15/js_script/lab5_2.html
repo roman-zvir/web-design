@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 Task 2</title>
+	    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Слово та літера 'і'</h1>
+
+    <label for="textInput">Введіть текст:</label>
+    <textarea id="textInput" rows="4" cols="50"></textarea><br>
+
+    <button onclick="processText()">Обробити текст</button>
+
+    <p id="wordCount"></p>
+    <p id="swappedText"></p>
+
+    <script>
+        function processText() {
+            // Отримуємо введений текст
+            const text = document.getElementById('textInput').value;
+
+            // Розбиваємо текст на слова
+            const words = text.split(/\s+/);
+
+            // Підраховуємо кількість слів, в яких є літера 'і'
+            let count = 0;
+            words.forEach(word => {
+                if (word.includes('і')) {
+                    count++;
+                }
+            });
+
+            // Міняємо місцями перше та друге слово
+            if (words.length >= 2) {
+                [words[0], words[1]] = [words[1], words[0]];
+            }
+
+            // Виводимо результати
+            document.getElementById('wordCount').innerText = `Кількість слів з літерою 'і': ${count}`;
+            document.getElementById('swappedText').innerText = `Текст з поміняними словами: ${words.join(' ')}`;
+        }
+    </script>
+
+<ul>
+    <li>
+        <a class="home" href="../index.html">Повернутися на головну сторінку</a>
+    </li>
+</ul>
+	
+</body>
+</html>

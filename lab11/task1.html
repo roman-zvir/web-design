@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Завдання 1. Робота з діалоговими вікнами</title>
+	</head>
+	<body>
+		<script> 
+			"use strict";
+			alert("Вітаю вас на цьому чудовому сайті!"); 
+			const answer=confirm("Щоб почати користуватися сайтом вам потрібно заповнити коротеньку анкету");
+			if (answer) {
+				const name=prompt ("Введіть будь ласка ваше ім'я", "");
+				const place=prompt ("Введіть ваше місцезнаходження");
+				const phone=prompt ("Ваш номер телефону");
+				alert(name + ", Ваші дані було передано в СБУ!");
+			} 
+			else alert ("Ще зустрінемось!");
+		</script>
+	</body>
+</html>

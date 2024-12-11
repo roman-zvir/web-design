@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 Task 1</title>
+		    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <h1>Обробка рядка</h1>
+    <p id="originalText">Вхідний текст: <span id="inputText">BC,AAB,BC,AABC</span></p>
+    <p id="result"></p>
+
+    <script>
+        // Функція для видалення символів 'A', що стоять після коми
+        function removeAAfterComma(text) {
+            let result = "";
+            let afterComma = false; // прапор, який вказує, чи йде символ після коми
+            for (let i = 0; i < text.length; i++) {
+                if (text[i] === ',') {
+                    afterComma = true;
+                    result += text[i];
+                } else if (afterComma && text[i] === 'A') {
+                    continue; // Пропускаємо символ 'A', якщо він після коми
+                } else {
+                    afterComma = false;
+                    result += text[i];
+                }
+            }
+            return result;
+        }
+
+        // Функція для підрахунку кількості пар 'BC'
+        function countBC(text) {
+            let count = 0;
+            for (let i = 0; i < text.length - 1; i++) {
+                if (text[i] === 'B' && text[i + 1] === 'C') {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        // Отримуємо початковий текст
+        let inputText = document.getElementById("inputText").textContent;
+
+        // Видаляємо 'A' після коми
+        let modifiedText = removeAAfterComma(inputText);
+
+        // Підраховуємо кількість пар 'BC'
+        let bcCount = countBC(modifiedText);
+
+        // Виводимо результат
+        document.getElementById("result").innerHTML = `Модифікований текст: ${modifiedText}<br>Кількість пар 'BC': ${bcCount}`;
+    </script>
+
+<ul>
+    <li>
+        <a class="home" href="../index.html">Повернутися на головну сторінку</a>
+    </li>
+</ul>
+	
+</body>
+</html>

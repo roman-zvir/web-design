@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Звір, ПП-24</title>
+	    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Дні тижня</h1>
+    <script>
+        "use strict";
+
+        function weekDay(day, size, color) {
+            const days = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+            let today = new Date();
+            let dayOfWeek = today.getDay();
+            
+            // Створення елемента для відображення дня тижня
+            let dayElement = document.createElement("div");
+            dayElement.style.fontSize = size + "px";
+            dayElement.style.color = color;
+            dayElement.textContent = days[day % 7]; // Забезпечення циклічності
+            document.body.appendChild(dayElement);
+        }
+
+        // Відображення днів тижня з різними кольорами та розмірами
+        weekDay(0, 20, "red");    // Неділя
+        weekDay(1, 24, "orange"); // Понеділок
+        weekDay(2, 28, "yellow"); // Вівторок
+        weekDay(3, 32, "green");  // Середа
+        weekDay(4, 36, "blue");   // Четвер
+        weekDay(5, 40, "purple"); // П'ятниця
+        weekDay(6, 44, "pink");   // Субота
+    </script>
+
+	<ul>
+    <li>
+        <a class="home" href="../index.html">Повернутися на головну сторінку</a>
+    </li>
+	</ul>
+	
+</body>
+</html>
+
+

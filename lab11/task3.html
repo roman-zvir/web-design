@@ -1,0 +1,26 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Завдання 3. Обчислення арифметичних виразів</title>
+	</head>
+	<body>
+		<script> 
+			"use strict";
+			alert ("Привіт, я супер-пупер калькулятор і я пропоную обрахувати декілька задач");
+			const r=parseFloat(prompt("Завдання 1. Очислимо об'єм сфери, для обчислення введіть радіус", ""));
+			let s= (4/3) * Math.PI * Math.pow(r, 3);
+			alert ("Об'єм сфери дорівнює: " + s);
+
+		alert ("Завдання. Площа трикутника за фомулою Герона");
+		let a = parseFloat(prompt("Введіть довжину сторони a:"));
+		let b = parseFloat(prompt("Введіть сторону b:"));
+		let c = parseFloat(prompt("Введіть сторону c:"));
+
+		let p = (a + b + c) / 2;
+		let area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+
+	alert("Площа трикутника дорівнює: " + area);
+		</script>
+	</body>
+</html>

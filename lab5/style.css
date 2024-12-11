@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Deftone';
+    src: url('fonts/DEFTONE.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Qwitcher Grypen';
+    src: url('fonts/QwitcherGrypen-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Qwitcher Grypen';
+    src: url('fonts/QwitcherGrypen-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Deftone', sans-serif;
+}
+
+p {
+    font-family: 'Qwitcher Grypen', cursive; 
+    font-size: 50px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

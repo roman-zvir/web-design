@@ -1,0 +1,51 @@
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Чорний фон для контрасту */
+    font-family: 'Courier New', Courier, monospace; /* Шрифт, схожий на консоль */
+}
+
+.blue-screen {
+    background-color: #0000FF; /* Синій фон */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white; /* Білий текст */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: shake 0.1s infinite alternate; /* Анімація трясіння */
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-5px, 0);
+    }
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.error-code {
+    font-weight: bold; /* Виділити код помилки */
+}
+
+.error-details {
+    margin-top: 20px;
+    font-size: 0.9em;
+    border-top: 1px solid white; /* Розділення */
+    padding-top: 10px;
+}
+

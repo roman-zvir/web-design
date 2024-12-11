@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 Task 4</title>
+	    <link rel="stylesheet" href="../css/style.css"></head>
+</head>
+<body>
+    <h1>Програма шифрування</h1>
+    <label for="inputText">Введіть текст:</label>
+    <input type="text" id="inputText" placeholder="Введіть текст">
+    <button onclick="encryptText()">Зашифрувати</button>
+
+    <h2>Результат:</h2>
+    <p id="outputText"></p>
+
+    <script>
+        function encryptText() {
+            let inputText = document.getElementById("inputText").value;
+            let words = inputText.split(" ");
+            let encryptedWords = words.map(word => {
+                if (word.length <= 3) {
+                    return word; // якщо слово коротше або рівне 3 літер, не змінюємо
+                }
+                let firstChar = word[0];
+                let lastChar = word[word.length - 1];
+                let middleChars = word.slice(1, -1).split('');
+
+                // Перемішуємо тільки середину, якщо є більше ніж одна буква в середині
+                for (let i = middleChars.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [middleChars[i], middleChars[j]] = [middleChars[j], middleChars[i]]; // Фішка для перемішування
+                }
+                
+                return firstChar + middleChars.join('') + lastChar;
+            });
+            document.getElementById("outputText").textContent = encryptedWords.join(" ");
+        }
+    </script>
+
+	<ul>
+	    <li>
+	        <a class="home" href="../index.html">Повернутися на головну сторінку</a>
+	    </li>
+	</ul>
+	
+</body>
+</html>
