@@ -47,7 +47,7 @@ web-design/
 ├── lab12/          # Basic constructs of the JavaScript language
 ├── lab13/          # Using JavaScript functions
 ├── lab14/          # Working with JavaScript arrays
-├── lab15/          # Робота з рядками у JavaScript
+├── lab15/          # Working with strings in JavaScript
 └── README.md       # Documentation
 ```
 
